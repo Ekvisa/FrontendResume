@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", monospace;
+}
+.hidden {
+  display: none;
+}
+.container {
+  column-count: 3;
+  column-gap: 1em;
+  margin: 1em;
+}
+
+@media (max-width: 900px) {
+  .container {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    column-count: 1;
+  }
+}
+section {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  background: #ffffef;
+  line-height: 2em;
+}
+#showAll {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.lines {
+  path {
+    fill: none;
+    stroke: #333;
+    stroke-width: 0.5px;
+    stroke-linecap: round;
+  }
+}
+.colors {
+  path {
+    animation: pulseOpacity 1s ease-in-out infinite alternate;
+  }
+  path:hover {
+    filter: saturate(2);
+    animation: none;
+    cursor: pointer;
+  }
+}
+@keyframes pulseOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.img-wrapper {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(100, 100, 100, 0.8);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.7em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+#hello {
+  padding: 2em;
+  color: #222;
+}
+
+#skills_tip {
+  bottom: 18%;
+  left: 0;
+}
+#hobby_tip {
+  bottom: 14%;
+  right: 0;
+}
+#contacts_tip {
+  bottom: 36%;
+  right: 0;
+}
+#experience_tip {
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#values_tip {
+  bottom: 50%; /*54 62*/
+  left: 50%;
+}
+#aim_tip {
+  top: 1%;
+  left: 40%;
+  transform: translateX(-50%);
+}
+#education_tip {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section span {
+  color: #569cd6;
+}
+section h2 {
+  display: inline;
+}
+.tag {
+  color: #569cd6;
+}
+.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+.resume-block {
+  padding: 1rem;
+  border-radius: 8px;
+  opacity: 0.7;
+  .tag {
+    color: #569cd6;
+  }
+  .comment {
+    color: #6a9955;
+    font-style: italic;
+  }
+}
+
+#values_block {
+  background-color: #f4c2c2;
+}
+#aim_block {
+  background-color: #b5dab2;
+}
+#education_block {
+  background-color: #d6c6b9;
+}
+#skills_block {
+  background-color: #ffd3b6;
+}
+#hobby_block {
+  background-color: #a8dadc;
+}
+#experience_block {
+  background-color: #bfd8eb;
+}
+#contacts_block {
+  background-color: #c8bfe7;
+}
