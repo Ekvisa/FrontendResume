@@ -72,5 +72,4 @@ function showAllBlocks() {
     showAllButton.innerText = "Раскрыть всё";
   }
 }
-
 showAllButton.addEventListener("click", showAllBlocks);

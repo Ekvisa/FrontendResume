@@ -253,11 +253,11 @@
         проекты.<br />Картинка расскажет больше. -->
         <span>&lt;section class="intro"&gt;</span><br />
         &nbsp;&nbsp;<span>&lt;h1&gt;</span>Резюме<span>&lt;/h1&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;p&gt;</span>Привет! Я Екатерина, специалистка с
-        опытом в веб-разработке и тестировании, умею видеть проект целиком: от
-        вёрстки и CMS до качества и автоматизации процессов. Внимательна к
-        деталям, стремлюсь находить и устранять узкие места. Ищу возможности
-        развиваться в проектах на стыке технологий и пользовательского опыта.
+        &nbsp;&nbsp;<span>&lt;p&gt;</span>Привет, я Катя. Имею опыт в
+        веб-разработке и тестировании, умею видеть проект целиком: от вёрстки и
+        CMS до качества и автоматизации процессов. Внимательна к деталям,
+        стремлюсь находить и устранять узкие места. Ищу возможности развиваться
+        в проектах на стыке технологий и пользовательского опыта.
         <span class="tag">&lt;/p&gt;</span><br />
         <span class="tag"
           >&nbsp;&nbsp;&lt;!-- Картинка расскажет больше ❀ --&gt;</span
@@ -301,12 +301,12 @@
         &nbsp;&nbsp;<span>}</span><br />
         <span>}</span><br />
         <span>const education = [</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span>'Прикладная математика и
-        информатика', 'Самарский университет', 2008<span>),</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span> 'Переводчик в сфере проф.
-        коммуникации', 'Самарский университет', 2008<span>),</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span> 'Frontend разработка',
-        'JavaRush', 2025<span>)</span><br />
+        &nbsp;&nbsp;<span>new Образование(</span>"Прикладная математика и
+        информатика", "Самарский университет", 2008<span>),</span><br />
+        &nbsp;&nbsp;<span>new Образование(</span> "Переводчик в сфере проф.
+        коммуникации", "Самарский университет", 2008<span>),</span><br />
+        &nbsp;&nbsp;<span>new Образование(</span> "Frontend разработка",
+        "JavaRush", 2025<span>)</span><br />
         <span>];</span>
       </section>
       <section class="hidden resume-block skills-block" id="skills_block">
@@ -331,21 +331,23 @@
         <h2>Хобби</h2>
         <span>= {</span><br />
         <span>create() { //создавать</span><br />
-        <span>return</span> ['рисование', 'керамика', 'пет-проекты'];<br />
+        <span>return</span> ["рисование", "керамика", "пет-проекты"];<br />
         },<br />
         <span>explore() { //и изучать</span><br />
-        <span>return</span> ['иностранные языки', 'наука', 'художественные
-        книги'];<br />
+        <span>return</span> ["иностранные языки", "наука", "художественные
+        книги"];<br />
         <span>} };</span>
       </section>
       <section class="hidden resume-block contacts-block" id="contacts_block">
         <span>const</span>
         <h2>Контакты</h2>
         <span>= new Set([</span><br />
-        <a href="github.com/Ekvisa">Gthub</a>,<br />
-        <a href="mailto:katishh@gmail.com">katishh@gmail.com</a>,<br />
-        <a href="@ek_pike">Telegram</a>,<br />
-        <a href="https://www.linkedin.com/in/ekaterina-savina-052774294/"
+        &nbsp;&nbsp;<a href="github.com/Ekvisa">GitHub</a>,<br />
+        &nbsp;&nbsp;<a href="mailto:katishh@gmail.com">katishh@gmail.com</a
+        >,<br />
+        &nbsp;&nbsp;<a href="@ek_pike">Telegram</a>,<br />
+        &nbsp;&nbsp;<a
+          href="https://www.linkedin.com/in/ekaterina-savina-052774294/"
           >LinkedIn</a
         >,<br />
         <span>]);</span>
@@ -354,14 +356,116 @@
         class="hidden resume-block experience-block"
         id="experience_block"
       >
-        let experience = [<br />
-        {job: "QA Engineer", place: "NetCracker", years: 2010–2021, ...},<br />
-        {job: " Web-разработчик", place: "Веб-студия Sabit", years: 2009 — 2010,
-        ...},<br />
-        {job: " Web-разработчик", place: "Веб-студия MiraStudio", years:
-        2008–2009, ...}<br />
-        {job: "Верстальщик", place: "Самарский Государственный Университет,
-        отдел дистанционных образовательных технологий", years: 2006–2008, ...}]
+        <span>const</span>
+        <h2>Опыт</h2>
+        <span>= new Map([</span><br />
+        &nbsp;&nbsp;["QA Engineer", "NetCracker"],<br />
+        &nbsp;&nbsp;["Web-дизайнер", "Веб-студия Sabit"],<br />
+        &nbsp;&nbsp;["Web-разработчик", "Веб-студия MiraStudio"],<br />
+        &nbsp;&nbsp;["Верстальщик", "Самарский Государственный Университет"],<br />
+        <span>]);</span>
+      </section>
+      <section
+        class="hidden resume-block experience-block"
+        id="experience_block"
+      >
+        <span>const</span>
+        <h2>QA_Engineer</h2>
+        <span>= {</span><br />
+        &nbsp;&nbsp;<span>place:</span> "NetCracker",<br />
+        &nbsp;&nbsp;<span>years:</span> "2010–2021",<br />
+        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Проводила ручное тестирование
+        веб-приложений",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Писала тест-кейсы",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Составляла баг-репорты, готовила отчёты по
+        автотестам",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Создавала, настраивала и поддерживала
+        автотесты",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Готовила окружение для тестирования",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Участвовала в ежедневных встречах и
+        планировании спринтов",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Менторила младших специалистов и руководила
+        тестированием на небольшом стриме",<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"На проекте закрывала задачи за троих
+        специалистов в условиях нехватки команды",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Обнаружила критический дефект в автотестах,
+        который тормозил процесс тестирования",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Помогала оптимизировать процесс тестирования и
+        подготовки окружений",<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        <span>};</span>
+      </section>
+      <section
+        class="hidden resume-block experience-block"
+        id="experience_block"
+      >
+        <span>const</span>
+        <h2>Web_дизайнер</h2>
+        <span>= {</span><br />
+        &nbsp;&nbsp;<span>place:</span> "Веб-студия Sabit",<br />
+        &nbsp;&nbsp;<span>years:</span> "2009 - 2010",<br />
+        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Верстала страницы для корпоративных сайтов",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Добавляла интерактивность с помощью
+        JavaScript",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Поддерживала существующие проекты",<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Обеспечила более удобное сопровождение сайтов
+        за счёт переработки их структуры",<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        <span>};</span>
+      </section>
+      <section
+        class="hidden resume-block experience-block"
+        id="experience_block"
+      >
+        <span>const</span>
+        <h2>Web_разработчик</h2>
+        <span>= {</span><br />
+        &nbsp;&nbsp;<span>place:</span> "Веб-студия MiraStudio",<br />
+        &nbsp;&nbsp;<span>years:</span> "2008 - 2009",<br />
+        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Верстала сайты по макетам и адаптировала их под
+        CMS Bitrix",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Проводила поддержку и доработку сайтов на
+        различных CMS",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Переписывала старые сайты с 'плоского' HTML на
+        PHP для упрощения администрирования",<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Освоила несколько CMS, познакомилась с
+        JavaScript и PHP",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Научилась планировать время и справляться с
+        большим объёмом задач",<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        <span>};</span>
+      </section>
+      <section
+        class="hidden resume-block experience-block"
+        id="experience_block"
+      >
+        <span>const</span>
+        <h2>Верстальщик</h2>
+        <span>= {</span><br />
+        &nbsp;&nbsp;<span>place:</span> "Самарский Государственный
+        Университет",<br />
+        &nbsp;&nbsp;<span>years:</span> "2006–2008",<br />
+        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Подготавливала страницы для учебных пособий
+        (дизайн и верстка)",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Оцифровывала тесты для системы дистанционного
+        обучения",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"Получила первый опыт взаимодействия с системами
+        управления контентом",<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
+        "Освоила вёрстку и тренировалась в адаптивности"<br />
+        &nbsp;&nbsp;<span>],</span><br />
+        <span>};</span>
       </section>
     </main>
     <script src="script.js"></script>

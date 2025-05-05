@@ -116,7 +116,8 @@ svg {
   transform: translateX(-50%);
 }
 section span {
-  color: #569cd6;
+  /*color: #569cd6;*/
+  color: white;
 }
 section h2 {
   display: inline;
@@ -131,7 +132,7 @@ section h2 {
 .resume-block {
   padding: 1rem;
   border-radius: 8px;
-  opacity: 0.7;
+  opacity: 0.8;
   .tag {
     color: #569cd6;
   }
