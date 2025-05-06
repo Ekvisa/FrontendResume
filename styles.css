@@ -98,7 +98,8 @@ svg {
 
 #contacts_tip {
   bottom: 36%;
-  right: 0;
+  right: 30%;
+  transform: translateX(65%);
 }
 
 #experience_tip {
@@ -124,6 +125,21 @@ svg {
   transform: translateX(-50%);
 }
 
+.close-btn {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  background: transparent;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
 section span {
   /*color: #569cd6;*/
   color: white;
@@ -143,6 +159,7 @@ section h2 {
 }
 
 .resume-block {
+  position: relative;
   padding: 1rem;
   border-radius: 8px;
   opacity: 0.8;
@@ -181,6 +198,17 @@ section h2 {
 
 #contacts_block {
   background-color: #c8bfe7;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 /*# sourceMappingURL=styles.css.map */
