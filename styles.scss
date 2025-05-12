@@ -10,11 +10,15 @@
   column-count: 3;
   column-gap: 1em;
   margin: 1em;
+  position: relative;
 }
 
 @media (max-width: 900px) {
   .container {
     column-count: 2;
+  }
+  #comment-block {
+    display: none;
   }
 }
 
@@ -22,11 +26,13 @@
   .container {
     column-count: 1;
   }
+  #comment-block {
+    display: none;
+  }
 }
 section {
   break-inside: avoid;
   margin-bottom: 1rem;
-  background: #ffffef;
   line-height: 2em;
 }
 #showAll {
@@ -79,9 +85,19 @@ svg {
   cursor: pointer;
 }
 
-#hello {
-  padding: 2em;
+.start {
+  padding: 1em;
   color: #222;
+}
+.start span {
+  color: #569cd6;
+}
+#comment-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  overflow: hidden;
 }
 
 #skills_tip {
@@ -131,25 +147,19 @@ svg {
   color: #000;
 }
 
-section span {
-  /*color: #569cd6;*/
+.resume-block span {
   color: white;
 }
+
 section h2 {
   display: inline;
 }
-.tag {
-  color: #569cd6;
-}
-.comment {
-  color: #6a9955;
-  font-style: italic;
-}
+
 .resume-block {
   position: relative;
   padding: 1rem;
   border-radius: 8px;
-  opacity: 0.8;
+  animation: fadeIn 1.5s ease-in-out;
   .tag {
     color: #569cd6;
   }
@@ -159,26 +169,69 @@ section h2 {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #values_block {
+  background-color: #f4c2c2;
+  transition: background-color 1.5s ease;
+}
+.values_block {
   background-color: #f4c2c2;
 }
 #aim_block {
   background-color: #b5dab2;
 }
+.aim_block {
+  background-color: #b5dab2;
+}
 #education_block {
+  background-color: #d6c6b9;
+}
+.education_block {
   background-color: #d6c6b9;
 }
 #skills_block {
   background-color: #ffd3b6;
 }
+.skills_block {
+  background-color: #ffd3b6;
+}
 #hobby_block {
   background-color: #a8dadc;
 }
-#experience_block {
+.hobby_block {
+  background-color: #a8dadc;
+}
+#experience_block,
+#qa_block,
+#des_block,
+#dev_block,
+#layout_block {
+  background-color: #bfd8eb;
+}
+.experience_block {
   background-color: #bfd8eb;
 }
 #contacts_block {
   background-color: #c8bfe7;
+}
+.contacts_block {
+  background-color: #c8bfe7;
+}
+
+#qa_tip,
+#des_tip,
+#dev_tip,
+#layout_tip {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #scrollTopBtn {

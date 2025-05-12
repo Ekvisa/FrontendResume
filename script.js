@@ -1,5 +1,8 @@
 const paths = document.querySelectorAll("svg path");
 const tooltips = document.querySelectorAll(".tooltip");
+const jobs = document.querySelectorAll("#experience_block b");
+console.log(tooltips);
+console.log(jobs);
 
 paths.forEach((path) => {
   let isTooltipVisible = false;
@@ -32,20 +35,44 @@ tooltips.forEach((tooltip) => {
   });
 });
 
-const greeting = document.getElementById("hello");
 //Show the resume block when click on the tooltip:
-tooltips.forEach((tooltip) => {
-  tooltip.addEventListener("click", () => {
-    const targetId = tooltip.id.replace("_tip", "_block");
+function openBlockByClick(element) {
+  element.addEventListener("click", () => {
+    const targetId = element.id.replace("_tip", "_block");
+    console.log(targetId);
     const resumeBlock = document.getElementById(targetId);
     if (resumeBlock) {
-      resumeBlock.classList.remove("hidden");
-    }
-    if (!greeting.classList.contains("hidden")) {
-      greeting.classList.add("hidden");
+      if (resumeBlock.classList.contains("hidden")) {
+        resumeBlock.classList.remove("hidden");
+      } else resumeBlock.classList.add("hidden");
     }
   });
+}
+
+tooltips.forEach((tooltip) => {
+  openBlockByClick(tooltip);
+  if (!document.getElementById("comment-block").classList.contains("hidden")) {
+    document.getElementById("comment-block").classList.add("hidden");
+  }
 });
+
+jobs.forEach((job) => {
+  console.log(job);
+  openBlockByClick(job);
+});
+
+// tooltips.forEach((tooltip) => {
+//   tooltip.addEventListener("click", () => {
+//     const targetId = tooltip.id.replace("_tip", "_block");
+//     const resumeBlock = document.getElementById(targetId);
+//     if (resumeBlock) {
+//       resumeBlock.classList.remove("hidden");
+//     }
+//     if (!greeting.classList.contains("hidden")) {
+//       greeting.classList.add("hidden");
+//     }
+//   });
+// });
 
 let isAllShown = false;
 
@@ -59,7 +86,11 @@ function showAllBlocks() {
       console.log(block);
       block.classList.remove("hidden");
     });
-    greeting.classList.add("hidden");
+    if (
+      !document.getElementById("comment-block").classList.contains("hidden")
+    ) {
+      document.getElementById("comment-block").classList.add("hidden");
+    }
     isAllShown = true;
     showAllButton.innerText = "Спрятать всё";
   } else {
@@ -67,7 +98,7 @@ function showAllBlocks() {
       console.log("-");
       block.classList.add("hidden");
     });
-    greeting.classList.remove("hidden");
+    document.getElementById("comment-block").classList.remove("hidden");
     isAllShown = false;
     showAllButton.innerText = "Раскрыть всё";
   }
@@ -97,5 +128,5 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.addEventListener("click", () => {
-  girl.scrollIntoView({ behavior: "smooth" });
+  window.scrollTo({ top: 0 });
 });
