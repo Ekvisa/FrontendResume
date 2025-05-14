@@ -172,13 +172,6 @@ section h2 {
   border-radius: 8px;
   animation: fadeIn 1.5s ease-in-out;
 }
-.resume-block .tag {
-  color: #569cd6;
-}
-.resume-block .comment {
-  color: #6a9955;
-  font-style: italic;
-}
 
 @keyframes fadeIn {
   from {
@@ -190,7 +183,6 @@ section h2 {
 }
 #values_block {
   background-color: #f4c2c2;
-  transition: background-color 1.5s ease;
 }
 
 .values_block {
@@ -229,16 +221,19 @@ section h2 {
   background-color: #a8dadc;
 }
 
-#experience_block,
+#experience_block {
+  background-color: #aed1ed;
+}
+
 #qa_block,
 #des_block,
 #dev_block,
 #layout_block {
-  background-color: #bfd8eb;
+  background-color: #bacbdc;
 }
 
 .experience_block {
-  background-color: #bfd8eb;
+  background-color: #aed1ed;
 }
 
 #contacts_block {
@@ -266,6 +261,10 @@ section h2 {
   font-size: 24px;
   cursor: pointer;
   transition: opacity 0.3s ease;
+}
+
+.shine {
+  box-shadow: -1px 1px 139px -62px rgba(0, 0, 0, 0.75) inset;
 }
 
 /*# sourceMappingURL=styles.css.map */
