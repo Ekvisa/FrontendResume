@@ -35,7 +35,6 @@ tooltips.forEach((tooltip) => {
   tooltip.addEventListener("mouseenter", () => {
     const blockClass = tooltip.id.replace("_tip", "-block");
     const shinyBlocks = document.getElementsByClassName(blockClass);
-    console.log(shinyBlocks);
     Array.from(shinyBlocks).forEach((block) => {
       block.classList.add("shine");
     });
@@ -65,6 +64,13 @@ function openBlockByClick(element) {
       }
     }
     resumeBlock.scrollIntoView();
+    isAllShown = Array.from(resumeBlocks).every(
+      (block) => !block.classList.contains("hidden")
+    );
+    console.log(isAllShown);
+    if (isAllShown) {
+      showAllButton.innerText = "Спрятать всё";
+    }
   });
 }
 
@@ -112,6 +118,14 @@ resumeBlocks.forEach((block) => {
   closeBtn.classList.add("close-btn");
   closeBtn.addEventListener("click", () => {
     block.classList.add("hidden");
+  });
+  closeBtn.addEventListener("mouseenter", () => {
+    const tipToShow = findTipId(block);
+    tipToShow.classList.add("hidden");
+  });
+  closeBtn.addEventListener("mouseleave", () => {
+    const tipToShow = findTipId(block);
+    tipToShow.classList.remove("hidden");
   });
   block.appendChild(closeBtn);
 

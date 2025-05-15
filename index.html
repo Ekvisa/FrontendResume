@@ -7,10 +7,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="buttons-wrapper">
+      <div class="showmode">
+        <a
+          href="https://docs.google.com/document/d/1rtVZ4v4xBggHXswYAqLEO0ThzZItaMqv_xg90vrON98/edit?usp=sharing"
+          title="Открыть в текстовом виде в новом окне"
+          target="_blank"
+          >Обычный вид</a
+        >
+        <button id="showAll">Раскрыть всё</button>
+      </div>
+      <div class="lang-buttons">
+        <button class="lang-btn active" data-lang="ru" disabled>RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
     <main class="container">
       <section>
         <div class="img-wrapper">
-          <button id="showAll">Раскрыть всё</button>
           <svg
             role="img"
             aria-labelledby="svg-title svg-desc"
@@ -236,6 +250,7 @@
           <div class="hidden tooltip" id="education_tip">На что опираюсь</div>
         </div>
       </section>
+
       <section id="hello-block" class="start">
         <span>&lt;section class="intro"&gt;</span><br />
         &nbsp;&nbsp;<span>&lt;h1&gt;</span>Резюме<span>&lt;/h1&gt;</span><br />
@@ -247,22 +262,6 @@
       <section id="comment-block" class="start">
         <span>&lt;!-- Картинка расскажет больше ❀ --&gt;</span>
       </section>
-      <section class="hidden resume-block values-block" id="values_block">
-        <span>&lt;ul class = "</span>
-        <h2>Ценности</h2>
-        <span>"&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;li&gt;</span>
-        Люблю превращать идеи в красивые, удобные и живые проекты.
-        <span>&lt;/li&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;li&gt;</span>
-        Мне важно гордиться тем, что делаю, и видеть, как работа приносит
-        пользу.
-        <span>&lt;/li&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;li&gt;</span>
-        Верю, что даже маленькие усилия могут менять мир.
-        <span>&lt;/li&gt;</span><br />
-        <span>&lt;/ul&gt;</span>
-      </section>
       <section class="hidden resume-block aim-block" id="aim_block">
         <span>function</span>
         <h2>Цель</h2>
@@ -272,25 +271,6 @@
         &nbsp;&nbsp;писатьЧистыйКод();<br />
         &nbsp;&nbsp;создаватьИнтерфейсыСЗаботойОЛюдях();<br />
         <span>}</span>
-      </section>
-      <section class="hidden resume-block education-block" id="education_block">
-        <span>class</span>
-        <h2>Образование</h2>
-        <span>{</span><br />
-        &nbsp;&nbsp;<span>constructor(title, place, year) {</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.title = title;</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.place = place;</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.year = year;</span><br />
-        &nbsp;&nbsp;<span>}</span><br />
-        <span>}</span><br />
-        <span>const education = [</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span>"Прикладная математика и
-        информатика", "Самарский университет", 2008<span>),</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span> "Переводчик в сфере проф.
-        коммуникации", "Самарский университет", 2008<span>),</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span> "Frontend разработка",
-        "JavaRush", 2025<span>)</span><br />
-        <span>];</span>
       </section>
       <section class="hidden resume-block skills-block" id="skills_block">
         <span>let</span>
@@ -309,37 +289,11 @@
         &nbsp;&nbsp;[Английский] //В2, свободно читаю документацию и книги<br />
         <span>];</span>
       </section>
-      <section class="hidden resume-block hobby-block" id="hobby_block">
-        <span>const</span>
-        <h2>Хобби</h2>
-        <span>= {</span><br />
-        <span>create() { //создавать</span><br />
-        <span>return</span> ["рисование", "керамика", "пет-проекты"];<br />
-        <span>},</span><br />
-        <span>explore() { //и изучать</span><br />
-        <span>return</span> ["иностранные языки", "наука", "художественные
-        книги"];<br />
-        <span>} };</span>
-      </section>
-      <section class="hidden resume-block contacts-block" id="contacts_block">
-        <span>const</span>
-        <h2>Контакты</h2>
-        <span>= new Set([</span><br />
-        &nbsp;&nbsp;<a href="github.com/Ekvisa">GitHub</a>,<br />
-        &nbsp;&nbsp;<a href="mailto:katishh@gmail.com">katishh@gmail.com</a
-        >,<br />
-        &nbsp;&nbsp;<a href="@ek_pike">Telegram</a>,<br />
-        &nbsp;&nbsp;<a
-          href="https://www.linkedin.com/in/ekaterina-savina-052774294/"
-          >LinkedIn</a
-        >,<br />
-        <span>]);</span>
-      </section>
       <section
         class="hidden resume-block experience-block"
         id="experience_block"
       >
-        <span>const</span>
+        <span>let</span>
         <h2>Опыт</h2>
         <span>= new Map([</span><br />
         &nbsp;&nbsp;["<b id="qa_tip">QA Engineer</b>", "NetCracker"],<br />
@@ -440,6 +394,68 @@
         &nbsp;&nbsp;<span>],</span><br />
         <span>};</span>
       </section>
+      <section class="hidden resume-block education-block" id="education_block">
+        <span>class</span>
+        <h2>Образование</h2>
+        <span>{</span><br />
+        &nbsp;&nbsp;<span>constructor(title, place, year) {</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.title = title;</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.place = place;</span><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.year = year;</span><br />
+        &nbsp;&nbsp;<span>}</span><br />
+        <span>}</span><br />
+        <span>let education = [</span><br />
+        &nbsp;&nbsp;<span>new Образование(</span>"Прикладная математика и
+        информатика", "Самарский университет", 2008<span>),</span><br />
+        &nbsp;&nbsp;<span>new Образование(</span> "Переводчик в сфере проф.
+        коммуникации", "Самарский университет", 2008<span>),</span><br />
+        &nbsp;&nbsp;<span>new Образование(</span> "Frontend разработка",
+        "JavaRush", 2025<span>)</span><br />
+        <span>];</span>
+      </section>
+      <section class="hidden resume-block values-block" id="values_block">
+        <span>&lt;ul class = "</span>
+        <h2>Ценности</h2>
+        <span>"&gt;</span><br />
+        &nbsp;&nbsp;<span>&lt;li&gt;</span>
+        Люблю превращать идеи в красивые, удобные и живые проекты.
+        <span>&lt;/li&gt;</span><br />
+        &nbsp;&nbsp;<span>&lt;li&gt;</span>
+        Мне важно гордиться тем, что делаю, и видеть, как работа приносит
+        пользу.
+        <span>&lt;/li&gt;</span><br />
+        &nbsp;&nbsp;<span>&lt;li&gt;</span>
+        Верю, что даже маленькие усилия могут менять мир.
+        <span>&lt;/li&gt;</span><br />
+        <span>&lt;/ul&gt;</span>
+      </section>
+      <section class="hidden resume-block hobby-block" id="hobby_block">
+        <span>let</span>
+        <h2>Хобби</h2>
+        <span>= {</span><br />
+        <span>create() { //создавать</span><br />
+        <span>return</span> ["рисование", "керамика", "пет-проекты"];<br />
+        <span>},</span><br />
+        <span>explore() { //и изучать</span><br />
+        <span>return</span> ["иностранные языки", "наука", "художественные
+        книги"];<br />
+        <span>} };</span>
+      </section>
+      <section class="hidden resume-block contacts-block" id="contacts_block">
+        <span>let</span>
+        <h2>Контакты</h2>
+        <span>= new Set([</span><br />
+        &nbsp;&nbsp;<a href="github.com/Ekvisa">GitHub</a>,<br />
+        &nbsp;&nbsp;<a href="mailto:katishh@gmail.com">katishh@gmail.com</a
+        >,<br />
+        &nbsp;&nbsp;<a href="@ek_pike">Telegram</a>,<br />
+        &nbsp;&nbsp;<a
+          href="https://www.linkedin.com/in/ekaterina-savina-052774294/"
+          >LinkedIn</a
+        >,<br />
+        <span>]);</span>
+      </section>
+
       <button id="scrollTopBtn" class="hidden" aria-label="Наверх">↑</button>
     </main>
     <script src="script.js"></script>

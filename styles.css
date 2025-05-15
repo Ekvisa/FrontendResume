@@ -15,20 +15,14 @@
   position: relative;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1350px) {
   .container {
     column-count: 2;
   }
-  #comment-block {
-    display: none;
-  }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .container {
     column-count: 1;
-  }
-  #comment-block {
-    display: none;
   }
 }
 section {
@@ -37,10 +31,18 @@ section {
   line-height: 2em;
 }
 
-#showAll {
-  position: absolute;
-  top: 0;
-  left: 0;
+.buttons-wrapper {
+  align-items: start;
+  justify-content: space-between;
+  display: flex;
+  margin: 1em 1em 2em;
+  flex-direction: row;
+}
+
+.showmode {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 svg {
@@ -96,14 +98,6 @@ svg {
   color: #569cd6;
 }
 
-#comment-block {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
-  overflow: hidden;
-}
-
 #skills_tip {
   bottom: 18%;
   left: 0;
@@ -151,7 +145,7 @@ svg {
   border: none;
   font-size: 1.2em;
   cursor: pointer;
-  color: #888;
+  color: #555;
 }
 
 .close-btn:hover {
@@ -185,15 +179,7 @@ section h2 {
   background-color: #f4c2c2;
 }
 
-.values_block {
-  background-color: #f4c2c2;
-}
-
 #aim_block {
-  background-color: #b5dab2;
-}
-
-.aim_block {
   background-color: #b5dab2;
 }
 
@@ -201,23 +187,11 @@ section h2 {
   background-color: #d6c6b9;
 }
 
-.education_block {
-  background-color: #d6c6b9;
-}
-
 #skills_block {
   background-color: #ffd3b6;
 }
 
-.skills_block {
-  background-color: #ffd3b6;
-}
-
 #hobby_block {
-  background-color: #a8dadc;
-}
-
-.hobby_block {
   background-color: #a8dadc;
 }
 
@@ -237,10 +211,6 @@ section h2 {
 }
 
 #contacts_block {
-  background-color: #c8bfe7;
-}
-
-.contacts_block {
   background-color: #c8bfe7;
 }
 
