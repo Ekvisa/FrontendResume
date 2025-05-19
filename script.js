@@ -51,11 +51,10 @@ tooltips.forEach((tooltip) => {
 //Show the resume block when click on the tooltip:
 function openBlockByClick(element) {
   element.addEventListener("click", () => {
-    if (
-      !document.getElementById("comment-block").classList.contains("hidden")
-    ) {
-      document.getElementById("comment-block").classList.add("hidden");
+    if (document.getElementById("explain-block").classList.contains("hidden")) {
+      document.getElementById("explain-block").classList.remove("hidden");
     }
+
     const targetId = element.id.replace("_tip", "_block");
     const resumeBlock = document.getElementById(targetId);
     if (resumeBlock) {
@@ -82,32 +81,32 @@ jobs.forEach((job) => {
   openBlockByClick(job);
 });
 
+//[Show all] button:
 let isAllShown = false;
-
 showAllButton = document.getElementById("showAll");
-
 const resumeBlocks = document.querySelectorAll(".resume-block");
-
 function showAllBlocks() {
-  if (showAllButton.innerText === "Раскрыть всё") {
+  let buttonData = showAllButton.getAttribute("data-i18n");
+  if (buttonData === "open_all") {
     resumeBlocks.forEach((block) => {
       block.classList.remove("hidden");
     });
-    if (
-      !document.getElementById("comment-block").classList.contains("hidden")
-    ) {
-      document.getElementById("comment-block").classList.add("hidden");
+
+    if (document.getElementById("explain-block").classList.contains("hidden")) {
+      document.getElementById("explain-block").classList.remove("hidden");
     }
     isAllShown = true;
-    showAllButton.innerText = "Спрятать всё";
+    showAllButton.setAttribute("data-i18n", "close_all");
   } else {
     resumeBlocks.forEach((block) => {
       block.classList.add("hidden");
     });
     document.getElementById("comment-block").classList.remove("hidden");
     isAllShown = false;
-    showAllButton.innerText = "Раскрыть всё";
+    showAllButton.setAttribute("data-i18n", "open_all");
   }
+  //update button text:
+  updateTranslation(showAllButton, lang);
 }
 showAllButton.addEventListener("click", showAllBlocks);
 
@@ -118,6 +117,13 @@ resumeBlocks.forEach((block) => {
   closeBtn.classList.add("close-btn");
   closeBtn.addEventListener("click", () => {
     block.classList.add("hidden");
+    const isAllHidden = Array.from(resumeBlocks).every((b) =>
+      b.classList.contains("hidden")
+    );
+    if (isAllHidden === true) {
+      showAllButton.setAttribute("data-i18n", "open_all");
+      updateTranslation(showAllButton, lang);
+    }
   });
   closeBtn.addEventListener("mouseenter", () => {
     const tipToShow = findTipId(block);

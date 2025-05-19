@@ -93,9 +93,9 @@ svg {
   padding: 1em;
   color: #222;
 }
-
-.start span {
+.start i {
   color: #569cd6;
+  font-style: normal;
 }
 
 #skills_tip {
@@ -152,10 +152,6 @@ svg {
   color: #000;
 }
 
-.resume-block span {
-  color: white;
-}
-
 section h2 {
   display: inline;
 }
@@ -165,6 +161,10 @@ section h2 {
   padding: 1rem;
   border-radius: 8px;
   animation: fadeIn 1.5s ease-in-out;
+}
+.resume-block i {
+  color: white;
+  font-style: normal;
 }
 
 @keyframes fadeIn {
@@ -220,6 +220,7 @@ section h2 {
 #layout_tip {
   text-decoration: underline;
   cursor: pointer;
+  color: blue;
 }
 
 #scrollTopBtn {

@@ -13,13 +13,14 @@
           href="https://docs.google.com/document/d/1rtVZ4v4xBggHXswYAqLEO0ThzZItaMqv_xg90vrON98/edit?usp=sharing"
           title="Открыть в текстовом виде в новом окне"
           target="_blank"
+          data-i18n="usual-resume"
           >Обычный вид</a
         >
-        <button id="showAll">Раскрыть всё</button>
+        <button id="showAll" data-i18n="open_all">Раскрыть всё</button>
       </div>
       <div class="lang-buttons">
-        <button class="lang-btn active" data-lang="ru" disabled>RU</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" disabled>ru</button>
+        <button class="lang-btn" id="lang-switch">en</button>
       </div>
     </div>
     <main class="container">
@@ -240,211 +241,370 @@
             </g>
           </svg>
           <!--Дальше идут всплывающие подсказки-->
-          <div class="hidden tooltip" id="skills_tip">Что в багаже</div>
-          <div class="hidden tooltip" id="hobby_tip">Моя "cup of tea"</div>
-          <div class="hidden tooltip" id="contacts_tip">Как связаться</div>
-          <div class="hidden tooltip" id="experience_tip">С чем имела дело</div>
-          <div class="hidden tooltip" id="values_tip">К чему лежит душа</div>
-          <div class="hidden tooltip" id="aim_tip">Куда хочу расти</div>
+          <div class="hidden tooltip" id="skills_tip" data-i18n="skills_tip">
+            Что в багаже
+          </div>
+          <div class="hidden tooltip" id="hobby_tip" data-i18n="hobby_tip">
+            Моя "cup of tea"
+          </div>
+          <div
+            class="hidden tooltip"
+            id="contacts_tip"
+            data-i18n="contacts_tip"
+          >
+            Как связаться
+          </div>
+          <div
+            class="hidden tooltip"
+            id="experience_tip"
+            data-i18n="experience_tip"
+          >
+            С чем имела дело
+          </div>
+          <div class="hidden tooltip" id="values_tip" data-i18n="values_tip">
+            К чему лежит душа
+          </div>
+          <div class="hidden tooltip" id="aim_tip" data-i18n="aim_tip">
+            Куда хочу расти
+          </div>
           <!-- Веточка помнит прикосновение ветра. Спасибо, Соня ♡ -->
-          <div class="hidden tooltip" id="education_tip">На что опираюсь</div>
+          <div
+            class="hidden tooltip"
+            id="education_tip"
+            data-i18n="education_tip"
+          >
+            На что опираюсь
+          </div>
         </div>
       </section>
 
       <section id="hello-block" class="start">
-        <span>&lt;section class="intro"&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;h1&gt;</span>Резюме<span>&lt;/h1&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;p&gt;</span>Привет, я Катя. Имею опыт в
-        веб-разработке и тестировании. Умею видеть проект целиком и ловить
-        мелочи.<span>&lt;/p&gt;</span><br />
-        <span>&lt;/section&gt;</span>
+        <i>&lt;section class="intro"&gt;</i><br />
+        &nbsp;&nbsp;<i>&lt;h1&gt;</i><span data-i18n="title">Резюме.</span
+        ><i>&lt;/h1&gt;</i><br />
+        &nbsp;&nbsp;<i>&lt;p&gt;</i
+        ><span data-i18n="hello"
+          >Привет, я Катя. Имею опыт в веб-разработке и тестировании. Умею
+          видеть проект целиком и ловить мелочи.</span
+        ><i>&lt;/p&gt;</i><br />
+        <i>&lt;/section&gt;</i>
       </section>
       <section id="comment-block" class="start">
-        <span>&lt;!-- Картинка расскажет больше ❀ --&gt;</span>
+        <i
+          >&lt;!--
+          <span data-i18n="comment"
+            >Поиграй с картинкой — она не просто так! Или раскрой сразу всё - я
+            не обижусь</span
+          >
+          ❀ --&gt;</i
+        >
+      </section>
+      <section id="explain-block" class="start hidden">
+        <i
+          >//
+          <span data-i18n="const">const - для прошлого, его не изменить</span
+          >.</i
+        ><br />
+        <i
+          >//
+          <span data-i18n="let">let - для навыков, их можно дополнять</span>.</i
+        ><br />
+        <i
+          >//
+          <span data-i18n="data-structures"
+            >Структуры данных в блоках подобраны по смыслу</span
+          >.</i
+        >
       </section>
       <section class="hidden resume-block aim-block" id="aim_block">
-        <span>function</span>
-        <h2>Цель</h2>
-        <span>() {</span><br />
-        &nbsp;&nbsp;<span>//Расти:</span><br />
-        &nbsp;&nbsp;погружатьсяВСложныеЗадачи();<br />
-        &nbsp;&nbsp;писатьЧистыйКод();<br />
-        &nbsp;&nbsp;создаватьИнтерфейсыСЗаботойОЛюдях();<br />
-        <span>}</span>
+        <i>function</i>
+        <h2 data-i18n="aim">Цель</h2>
+        <i>() {</i><br />
+        &nbsp;&nbsp;<i>//<span data-i18n="aim_grow">Расти</span>:</i><br />
+        &nbsp;&nbsp;<span data-i18n="aim_f1">погружатьсяВСложныеЗадачи</span
+        >();<br />
+        &nbsp;&nbsp;<span data-i18n="aim_f2">писатьЧистыйКод</span>();<br />
+        &nbsp;&nbsp;<span data-i18n="aim_f3"
+          >создаватьИнтерфейсыСЗаботойОЛюдях</span
+        >();<br />
+        <i>}</i>
       </section>
       <section class="hidden resume-block skills-block" id="skills_block">
-        <span>let</span>
-        <h2>Навыки</h2>
-        <span>= [</span><br />
-        &nbsp;&nbsp;//Разметка и стили:<br />
-        &nbsp;&nbsp;[HTML5, CSS3, адаптивность, Flexbox, Grid, переменные, media
-        queries, семантика],<br />
-        &nbsp;&nbsp;//Языки программирования:<br />
+        <i>let</i>
+        <h2 data-i18n="skills">Навыки</h2>
+        <i>= [</i><br />
+        &nbsp;&nbsp;//<span data-i18n="skills_layout">Разметка и стили</span
+        >:<br />
+        &nbsp;&nbsp;[HTML5, CSS3,
+        <span data-i18n="skills_adapt">адаптивность</span>, Flexbox, Grid,
+        <span data-i18n="skills_var">переменные</span>, media queries,
+        <span data-i18n="skills_sem">семантика</span>],<br />
+        &nbsp;&nbsp;//<span data-i18n="skills_lang">Языки программирования</span
+        >:<br />
         &nbsp;&nbsp;[JavaScript, TypeScript, Java],<br />
-        &nbsp;&nbsp;//Работа с данными:<br />
+        &nbsp;&nbsp;//<span data-i18n="skills_data">Работа с данными</span
+        >:<br />
         &nbsp;&nbsp;[REST API, JSON, DOM API, HTTP/HTTPS, SQL],<br />
-        &nbsp;&nbsp;//Инструменты:<br />
+        &nbsp;&nbsp;//<span data-i18n="skills_tools">Инструменты</span>:<br />
         &nbsp;&nbsp;[Git, Jira, Postman, VS Code, Figma, IntelliJ IDEA],<br />
-        &nbsp;&nbsp;//Иностранные языки:<br />
-        &nbsp;&nbsp;[Английский] //В2, свободно читаю документацию и книги<br />
-        <span>];</span>
+        &nbsp;&nbsp;//<span data-i18n="skills_foreign">Иностранные языки</span
+        >:<br />
+        &nbsp;&nbsp;[<span data-i18n="skills_en">Английский</span>] //В2,
+        <span data-i18n="skills_b2">свободно читаю документацию и книги</span
+        ><br />
+        <i>];</i>
       </section>
       <section
         class="hidden resume-block experience-block"
         id="experience_block"
       >
-        <span>let</span>
+        <i>let</i>
         <h2>Опыт</h2>
-        <span>= new Map([</span><br />
+        <i>= new Map([</i><br />
         &nbsp;&nbsp;["<b id="qa_tip">QA Engineer</b>", "NetCracker"],<br />
-        &nbsp;&nbsp;["<b id="des_tip">Web-дизайнер</b>", "Веб-студия Sabit"],<br />
-        &nbsp;&nbsp;["<b id="dev_tip">Web-разработчик</b>", "Веб-студия
+        &nbsp;&nbsp;["<b id="des_tip"
+          ><span data-i18n="skills_webdev">Web-разработчик</span></b
+        >", "<span data-i18n="skills_webstudio">Веб-студия</span> Sabit"],<br />
+        &nbsp;&nbsp;["<b id="dev_tip"
+          ><span data-i18n="skills_laydes">Верстальщик</span></b
+        >", "<span data-i18n="skills_webstudio">Веб-студия</span>
         MiraStudio"],<br />
-        &nbsp;&nbsp;["<b id="layout_tip">Верстальщик</b>", "Самарский
-        Государственный Университет"],<br />
-        <span>]);</span>
+        &nbsp;&nbsp;["<b id="layout_tip"
+          ><span data-i18n="skills_webdes">Web-дизайнер</span></b
+        >", "<span data-i18n="skills_univer"
+          >Самарский Государственный Университет</span
+        >"],<br />
+        <i>]);</i>
       </section>
       <section class="hidden resume-block experience-block" id="qa_block">
-        <span>const</span>
+        <i>const</i>
         <h2>QA_Engineer</h2>
-        <span>= {</span><br />
-        &nbsp;&nbsp;<span>place:</span> "NetCracker",<br />
-        &nbsp;&nbsp;<span>years:</span> "2010–2021",<br />
-        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Проводила ручное тестирование
-        веб-приложений",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Писала тест-кейсы",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Составляла баг-репорты, готовила отчёты по
-        автотестам",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Создавала, настраивала и поддерживала
-        автотесты",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Готовила окружение для тестирования",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Участвовала в ежедневных встречах и
-        планировании спринтов",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Менторила младших специалистов и руководила
-        тестированием на небольшом стриме",<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"На проекте закрывала задачи за троих
-        специалистов в условиях нехватки команды",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Обнаружила критический дефект в автотестах,
-        который тормозил процесс тестирования",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Помогала оптимизировать процесс тестирования и
-        подготовки окружений",<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        <span>};</span>
+        <i>= {</i><br />
+        &nbsp;&nbsp;<i>place:</i> "NetCracker",<br />
+        &nbsp;&nbsp;<i>years:</i> "2010–2021",<br />
+        &nbsp;&nbsp;<i
+          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks1"
+          >Проводила ручное тестирование веб-приложений</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks2"
+          >Писала тест-кейсы</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks3"
+          >Составляла баг-репорты, готовила отчёты по автотестам</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks4"
+          >Создавала, настраивала и поддерживала автотесты</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks5"
+          >Готовила окружение для тестирования</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks6"
+          >Участвовала в ежедневных встречах и планировании спринтов</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks7"
+          >Менторила младших специалистов и руководила тестированием на
+          небольшом стриме</span
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        &nbsp;&nbsp;<i
+          >achievements: [
+          <span data-i18n="skills_achiev">//достижения</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_achiev1"
+          >На проекте закрывала задачи за троих специалистов в условиях нехватки
+          команды</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_achiev2"
+          >Обнаружила критический дефект в автотестах, который тормозил процесс
+          тестирования</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_achiev3"
+          >Помогала оптимизировать процесс тестирования и подготовки
+          окружений</span
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        <i>};</i>
       </section>
       <section class="hidden resume-block experience-block" id="des_block">
-        <span>const</span>
-        <h2>Web_дизайнер</h2>
-        <span>= {</span><br />
-        &nbsp;&nbsp;<span>place:</span> "Веб-студия Sabit",<br />
-        &nbsp;&nbsp;<span>years:</span> "2009 - 2010",<br />
-        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Верстала страницы для корпоративных сайтов",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Добавляла интерактивность с помощью
-        JavaScript",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Поддерживала существующие проекты",<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Обеспечила более удобное сопровождение сайтов
-        за счёт переработки их структуры",<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        <span>};</span>
+        <i>const</i>
+        <h2 data-i18n="skills_webdev">Web-разработчик</h2>
+        <i>= {</i><br />
+        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="skills_webstudio"
+          >Веб-студия</span
+        >
+        Sabit",<br />
+        &nbsp;&nbsp;<i>years:</i> "2009 - 2010",<br />
+        &nbsp;&nbsp;<i
+          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_tasks1"
+          >Верстала страницы для корпоративных сайтов</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_tasks2"
+          >Добавляла интерактивность с помощью JavaScript</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_tasks3"
+          >Поддерживала существующие проекты</span
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        &nbsp;&nbsp;<i
+          >achievements: [
+          <span data-i18n="skills_achiev">//достижения</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_achiev1"
+          >Обеспечила более удобное сопровождение сайтов за счёт переработки их
+          структуры</span
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        <i>};</i>
       </section>
       <section class="hidden resume-block experience-block" id="dev_block">
-        <span>const</span>
-        <h2>Web_разработчик</h2>
-        <span>= {</span><br />
-        &nbsp;&nbsp;<span>place:</span> "Веб-студия MiraStudio",<br />
-        &nbsp;&nbsp;<span>years:</span> "2008 - 2009",<br />
-        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Верстала сайты по макетам и адаптировала их под
-        CMS Bitrix",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Проводила поддержку и доработку сайтов на
-        различных CMS",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Переписывала старые сайты с 'плоского' HTML на
-        PHP для упрощения администрирования",<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Освоила несколько CMS, познакомилась с
-        JavaScript и PHP",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Научилась планировать время и справляться с
-        большим объёмом задач",<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        <span>};</span>
+        <i>const</i>
+        <h2 data-i18n="skills_laydes">Верстальщик</h2>
+        <i>= {</i><br />
+        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="skills_webstudio"
+          >Веб-студия</span
+        >
+        MiraStudio",<br />
+        &nbsp;&nbsp;<i>years:</i> "2008 - 2009",<br />
+        &nbsp;&nbsp;<i
+          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_tasks1"
+          >Верстала сайты по макетам и адаптировала их под CMS Bitrix</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_tasks2"
+          >Проводила поддержку и доработку сайтов на различных CMS</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_tasks3"
+          >Переписывала старые сайты с 'плоского' HTML на PHP для упрощения
+          администрирования</span
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        &nbsp;&nbsp;<i
+          >achievements: [
+          <span data-i18n="skills_achiev">//достижения</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_achiev1"
+          >Освоила несколько CMS, познакомилась с JavaScript и PHP</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_achiev2"
+          >Научилась планировать время и справляться с большим объёмом
+          задач</span
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        <i>};</i>
       </section>
       <section class="hidden resume-block experience-block" id="layout_block">
-        <span>const</span>
-        <h2>Верстальщик</h2>
-        <span>= {</span><br />
-        &nbsp;&nbsp;<span>place:</span> "Самарский Государственный
-        Университет",<br />
-        &nbsp;&nbsp;<span>years:</span> "2006–2008",<br />
-        &nbsp;&nbsp;<span>tasks: [ //задачи</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Подготавливала страницы для учебных пособий
-        (дизайн и верстка)",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Оцифровывала тесты для системы дистанционного
-        обучения",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"Получила первый опыт взаимодействия с системами
-        управления контентом",<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        &nbsp;&nbsp;<span>achievements: [ //достижения</span><br />
-        "Освоила вёрстку и тренировалась в адаптивности"<br />
-        &nbsp;&nbsp;<span>],</span><br />
-        <span>};</span>
+        <i>const</i>
+        <h2 data-i18n="skills_webdes">Web-дизайнер</h2>
+        <i>= {</i><br />
+        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="skills_univer"
+          >Самарский Государственный Университет</span
+        >",<br />
+        &nbsp;&nbsp;<i>years:</i> "2006–2008",<br />
+        &nbsp;&nbsp;<i
+          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdes_tasks1"
+          >Подготавливала страницы для учебных пособий (дизайн и верстка)</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdes_tasks2"
+          >Оцифровывала тесты для системы дистанционного обучения</span
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdes_tasks3"
+          >Получила первый опыт взаимодействия с системами управления
+          контентом</span
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        &nbsp;&nbsp;<i
+          >achievements: [
+          <span data-i18n="skills_achiev">//достижения</span></i
+        ><br />
+        "<span data-i18n="skills_webdes_achiev1"
+          >Освоила вёрстку и тренировалась в адаптивности</span
+        >"<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        <i>};</i>
       </section>
       <section class="hidden resume-block education-block" id="education_block">
-        <span>class</span>
-        <h2>Образование</h2>
-        <span>{</span><br />
-        &nbsp;&nbsp;<span>constructor(title, place, year) {</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.title = title;</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.place = place;</span><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<span>this.year = year;</span><br />
-        &nbsp;&nbsp;<span>}</span><br />
-        <span>}</span><br />
-        <span>let education = [</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span>"Прикладная математика и
-        информатика", "Самарский университет", 2008<span>),</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span> "Переводчик в сфере проф.
-        коммуникации", "Самарский университет", 2008<span>),</span><br />
-        &nbsp;&nbsp;<span>new Образование(</span> "Frontend разработка",
-        "JavaRush", 2025<span>)</span><br />
-        <span>];</span>
+        <i>class</i>
+        <h2 data-i18n="education">Образование</h2>
+        <i>{</i><br />
+        &nbsp;&nbsp;<i>constructor(title, place, year) {</i><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<i>this.title = title;</i><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<i>this.place = place;</i><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<i>this.year = year;</i><br />
+        &nbsp;&nbsp;<i>}</i><br />
+        <i>}</i><br />
+        <i>let education = [</i><br />
+        &nbsp;&nbsp;<i>new <span data-i18n="education">Образование</span>(</i
+        >"<span data-i18n="education_appmath"
+          >Прикладная математика и информатика</span
+        >", "<span data-i18n="education_unver"
+          >Самарский Государственный Университет</span
+        >", 2008<i>),</i><br />
+        &nbsp;&nbsp;<i>new <span data-i18n="education">Образование</span>(</i>
+        "<span data-i18n="education_transl"
+          >Переводчик в сфере профессиональной коммуникации</span
+        >", "<span data-i18n="education_unver"
+          >Самарский Государственный Университет</span
+        >", 2008<i>),</i><br />
+        &nbsp;&nbsp;<i>new <span data-i18n="education">Образование</span>(</i>
+        "<span data-i18n="education_fe">Frontend разработка</span>", "JavaRush",
+        2025<i>)</i><br />
+        <i>];</i>
       </section>
       <section class="hidden resume-block values-block" id="values_block">
-        <span>&lt;ul class = "</span>
-        <h2>Ценности</h2>
-        <span>"&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;li&gt;</span>
-        Люблю превращать идеи в красивые, удобные и живые проекты.
-        <span>&lt;/li&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;li&gt;</span>
-        Мне важно гордиться тем, что делаю, и видеть, как работа приносит
-        пользу.
-        <span>&lt;/li&gt;</span><br />
-        &nbsp;&nbsp;<span>&lt;li&gt;</span>
-        Верю, что даже маленькие усилия могут менять мир.
-        <span>&lt;/li&gt;</span><br />
-        <span>&lt;/ul&gt;</span>
+        <i>&lt;ul class = "</i>
+        <h2 data-i18n="values">Ценности</h2>
+        <i>"&gt;</i><br />
+        &nbsp;&nbsp;<i>&lt;li&gt;</i>
+        <span data-i18n="values1"
+          >Люблю превращать идеи в красивые, удобные и живые проекты.</span
+        >
+        <i>&lt;/li&gt;</i><br />
+        &nbsp;&nbsp;<i>&lt;li&gt;</i>
+        <span data-i18n="values2"
+          >Мне важно гордиться тем, что делаю, и видеть, как работа приносит
+          пользу.</span
+        >
+        <i>&lt;/li&gt;</i><br />
+        &nbsp;&nbsp;<i>&lt;li&gt;</i>
+        <span data-i18n="values3"
+          >Верю, что даже маленькие усилия могут менять мир.</span
+        >
+        <i>&lt;/li&gt;</i><br />
+        <i>&lt;/ul&gt;</i>
       </section>
       <section class="hidden resume-block hobby-block" id="hobby_block">
-        <span>let</span>
-        <h2>Хобби</h2>
-        <span>= {</span><br />
-        <span>create() { //создавать</span><br />
-        <span>return</span> ["рисование", "керамика", "пет-проекты"];<br />
-        <span>},</span><br />
-        <span>explore() { //и изучать</span><br />
-        <span>return</span> ["иностранные языки", "наука", "художественные
-        книги"];<br />
-        <span>} };</span>
+        <i>let</i>
+        <h2 data-i18n="hobby">Хобби</h2>
+        <i>= {</i><br />
+        <i>create() { <span data-i18n="hobby_create">//создавать</span></i
+        ><br />
+        <i>return</i> ["<span data-i18n="hobby_create_draw">рисование</span>",
+        "<span data-i18n="hobby_create_pot">керамика</span>", "<span
+          data-i18n="hobby_create_pet"
+          >пет-проекты</span
+        >"];<br />
+        <i>},</i><br />
+        <i>explore() { <span data-i18n="hobby_explore">//и изучать</span></i
+        ><br />
+        <i>return</i> ["<span data-i18n="hobby_explore_foreign"
+          >иностранные языки</span
+        >", "<span data-i18n="hobby_explore_sci">наука</span>", "<span
+          data-i18n="hobby_explore_fic"
+          >художественные книги</span
+        >"];<br />
+        <i>} };</i>
       </section>
       <section class="hidden resume-block contacts-block" id="contacts_block">
-        <span>let</span>
-        <h2>Контакты</h2>
-        <span>= new Set([</span><br />
+        <i>let</i>
+        <h2 data-i18n="contacts">Контакты</h2>
+        <i>= new Set([</i><br />
         &nbsp;&nbsp;<a href="github.com/Ekvisa">GitHub</a>,<br />
         &nbsp;&nbsp;<a href="mailto:katishh@gmail.com">katishh@gmail.com</a
         >,<br />
@@ -453,11 +613,12 @@
           href="https://www.linkedin.com/in/ekaterina-savina-052774294/"
           >LinkedIn</a
         >,<br />
-        <span>]);</span>
+        <i>]);</i>
       </section>
 
       <button id="scrollTopBtn" class="hidden" aria-label="Наверх">↑</button>
     </main>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
   </body>
 </html>
