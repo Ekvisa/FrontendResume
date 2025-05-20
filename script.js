@@ -1,3 +1,68 @@
+//Set translation:
+function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n], [data-i18n-href]").forEach((el) => {
+    updateTranslation(el, lang);
+  });
+  // document.querySelectorAll("[data-i18n]").forEach((el) => {
+  //   const key = el.dataset.i18n;
+  //   const langData = translations[lang];
+  //   if (!langData) {
+  //     console.warn(`No translations found for language: ${lang}`);
+  //     return;
+  //   }
+  //   const translated = translations[lang][key];
+  //   if (translated) el.textContent = translated;
+  // });
+
+  //Update buttons states:
+  document.querySelectorAll(".lang-buttons > button").forEach((b) => {
+    if (b.innerText === lang) {
+      b.setAttribute("disabled", "");
+    } else {
+      b.removeAttribute("disabled");
+    }
+  });
+}
+
+//Receive language from URL:
+function getLangFromURL() {
+  return new URLSearchParams(location.search).get("lang") || "ru";
+}
+//const langFromURL = new URLSearchParams(location.search).get("lang") || "ru";
+setLanguage(getLangFromURL());
+
+//Set language:
+document.querySelectorAll(".lang-buttons > button").forEach((b) => {
+  b.addEventListener("click", () => {
+    const lang = b.innerText;
+    const url = new URL(window.location);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", url);
+    setLanguage(lang);
+  });
+});
+
+//Set translation for the selected element
+// function updateTranslation(el, lang) {
+//   const key = el.dataset.i18n;
+//   const translated = translations[lang][key];
+//   if (translated) el.textContent = translated;
+// }
+function updateTranslation(el, lang) {
+  const textKey = el.dataset.i18n;
+  const hrefKey = el.dataset.i18nHref;
+
+  if (textKey) {
+    const translatedText = translations[lang][textKey];
+    if (translatedText) el.textContent = translatedText;
+  }
+
+  if (hrefKey) {
+    const translatedHref = translations[lang][hrefKey];
+    if (translatedHref) el.href = translatedHref;
+  }
+}
+
 const paths = document.querySelectorAll("svg path");
 const tooltips = document.querySelectorAll(".tooltip");
 const jobs = document.querySelectorAll("#experience_block b");
@@ -66,9 +131,10 @@ function openBlockByClick(element) {
     isAllShown = Array.from(resumeBlocks).every(
       (block) => !block.classList.contains("hidden")
     );
-    console.log(isAllShown);
     if (isAllShown) {
-      showAllButton.innerText = "Спрятать всё";
+      //showAllButton.innerText = "Спрятать всё";
+      showAllButton.setAttribute("data-i18n", "hide_all");
+      updateTranslation(showAllButton, getLangFromURL());
     }
   });
 }
@@ -106,7 +172,7 @@ function showAllBlocks() {
     showAllButton.setAttribute("data-i18n", "open_all");
   }
   //update button text:
-  updateTranslation(showAllButton, lang);
+  updateTranslation(showAllButton, getLangFromURL());
 }
 showAllButton.addEventListener("click", showAllBlocks);
 
@@ -122,7 +188,7 @@ resumeBlocks.forEach((block) => {
     );
     if (isAllHidden === true) {
       showAllButton.setAttribute("data-i18n", "open_all");
-      updateTranslation(showAllButton, lang);
+      updateTranslation(showAllButton, getLangFromURL());
     }
   });
   closeBtn.addEventListener("mouseenter", () => {

@@ -2,6 +2,8 @@
 const translations = {
   en: {
     usual_resume: "In usual form",
+    usual_resume_href:
+      "https://docs.google.com/document/d/1FliJ9cj0yiDFr-bLgYxYfeaG1QZEwgizXAB3RqmGz_8/edit?usp=sharing",
     open_all: "Open all",
     close_all: "Hide all",
     skills_tip: "In my toolkit",
@@ -36,48 +38,50 @@ const translations = {
     skills_foreign: "Foreign languages",
     skills_en: "English",
     skills_b2: "fluent reading of technical and general literature",
-    skills_webdev: "Web developer",
-    skills_laydes: "HTML/CSS Developer",
-    skills_webdes: "Web designer",
-    skills_tasks: " ",
-    skills_achiev: " ",
-    skills_webstudio: "Web studio",
-    skills_univer: "Samara State University",
-    skills_qa_tasks1: "Performed manual testing of web applications",
-    skills_qa_tasks2: "Wrote test cases",
-    skills_qa_tasks3: "Logged bug reports and prepared automated test reports",
-    skills_qa_tasks4: "Created, configured, and maintained automated tests",
-    skills_qa_tasks5: "Set up testing environments",
-    skills_qa_tasks6: "Participated in daily standups and sprint planning",
-    skills_qa_tasks7:
+    experience: "Experience",
+    experience_webdev: "Web developer",
+    experience_laydes: "HTML/CSS Developer",
+    experience_webdes: "Web designer",
+    experience_tasks: " ",
+    experience_achiev: " ",
+    experience_webstudio: "Web studio",
+    experience_univer: "Samara State University",
+    experience_qa_tasks1: "Performed manual testing of web applications",
+    experience_qa_tasks2: "Wrote test cases",
+    experience_qa_tasks3:
+      "Logged bug reports and prepared automated test reports",
+    experience_qa_tasks4: "Created, configured, and maintained automated tests",
+    experience_qa_tasks5: "Set up testing environments",
+    experience_qa_tasks6: "Participated in daily standups and sprint planning",
+    experience_qa_tasks7:
       "Mentored junior testers and led testing on a small stream/project",
-    skills_qa_achiev1:
+    experience_qa_achiev1:
       "On one project, handled the workload of three specialists due to team shortage",
-    skills_qa_achiev2:
+    experience_qa_achiev2:
       "Identified a critical defect in automated tests that was blocking the QA process",
-    skills_qa_achiev3:
+    experience_qa_achiev3:
       "Contributed to optimizing the testing workflow and environment setup",
-    skills_webdev_tasks1: "Created page layouts for corporate websites",
-    skills_webdev_tasks2: "Added interactivity using JavaScript",
-    skills_webdev_tasks3: "Maintained and updated existing projects",
-    skills_webdev_achiev1:
+    experience_webdev_tasks1: "Created page layouts for corporate websites",
+    experience_webdev_tasks2: "Added interactivity using JavaScript",
+    experience_webdev_tasks3: "Maintained and updated existing projects",
+    experience_webdev_achiev1:
       "Improved website maintainability by restructuring project architecture",
-    skills_laydes_tasks1:
+    experience_laydes_tasks1:
       "Built websites from design mockups and adapted them for Bitrix CMS",
-    skills_laydes_tasks2:
+    experience_laydes_tasks2:
       "Maintained and enhanced websites on various CMS platforms",
-    skills_laydes_tasks3:
+    experience_laydes_tasks3:
       "Rewrote old static HTML websites in PHP to simplify content management",
-    skills_laydes_achiev1:
+    experience_laydes_achiev1:
       "Gained hands-on experience with several CMS platforms, started learning JavaScript and PHP",
-    skills_laydes_achiev2:
+    experience_laydes_achiev2:
       "Learned time management and how to handle a high volume of tasks",
-    skills_webdes_tasks1:
+    experience_webdes_tasks1:
       "Designed and laid out pages for educational materials",
-    skills_webdes_tasks2: "Digitized tests for an e-learning system",
-    skills_webdes_tasks3:
+    experience_webdes_tasks2: "Digitized tests for an e-learning system",
+    experience_webdes_tasks3:
       "Gained first experience with content management systems",
-    skills_webdes_achiev1:
+    experience_webdes_achiev1:
       "Learned HTML/CSS layout techniques and practiced responsive design",
     education: "Education",
     education_appmath: "Applied Mathematics and Computer Science",
@@ -103,6 +107,8 @@ const translations = {
   },
   ru: {
     usual_resume: "Привычный вид",
+    usual_resume_href:
+      "https://docs.google.com/document/d/1rtVZ4v4xBggHXswYAqLEO0ThzZItaMqv_xg90vrON98/edit?usp=sharing",
     open_all: "Раскрыть всё",
     close_all: "Спрятать всё",
     skills_tip: "Что в багаже",
@@ -136,50 +142,52 @@ const translations = {
     skills_foreign: "Иностранные языки",
     skills_en: "Английский",
     skills_b2: "свободно читаю документацию и книги",
-    skills_webdev: "Web-разработчик",
-    skills_laydes: "Верстальщик",
-    skills_webdes: "Web-дизайнер",
-    skills_tasks: "//задачи",
-    skills_achiev: "//достижения",
-    skills_webstudio: "Веб-студия",
-    skills_univer: "Самарский Государственный Университет",
-    skills_qa_tasks1: "Проводила ручное тестирование веб-приложений",
-    skills_qa_tasks2: "Писала тест-кейсы",
-    skills_qa_tasks3: "Составляла баг-репорты, готовила отчёты по автотестам",
-    skills_qa_tasks4: "Создавала, настраивала и поддерживала автотесты",
-    skills_qa_tasks5: "Готовила окружение для тестирования",
-    skills_qa_tasks6:
+    experience: "Опыт",
+    experience_webdev: "Web-разработчик",
+    experience_laydes: "Верстальщик",
+    experience_webdes: "Web-дизайнер",
+    experience_tasks: "//задачи",
+    experience_achiev: "//достижения",
+    experience_webstudio: "Веб-студия",
+    experience_univer: "Самарский Государственный Университет",
+    experience_qa_tasks1: "Проводила ручное тестирование веб-приложений",
+    experience_qa_tasks2: "Писала тест-кейсы",
+    experience_qa_tasks3:
+      "Составляла баг-репорты, готовила отчёты по автотестам",
+    experience_qa_tasks4: "Создавала, настраивала и поддерживала автотесты",
+    experience_qa_tasks5: "Готовила окружение для тестирования",
+    experience_qa_tasks6:
       "Участвовала в ежедневных встречах и планировании спринтов",
-    skills_qa_tasks7:
+    experience_qa_tasks7:
       "Менторила младших специалистов и руководила тестированием на небольшом стриме",
-    skills_qa_achiev1:
+    experience_qa_achiev1:
       "На проекте закрывала задачи за троих специалистов в условиях нехватки команды",
-    skills_qa_achiev2:
+    experience_qa_achiev2:
       "Обнаружила критический дефект в автотестах, который тормозил процесс тестирования",
-    skills_qa_achiev3:
+    experience_qa_achiev3:
       "Помогала оптимизировать процесс тестирования и подготовки окружений",
-    skills_webdev_tasks1: "Верстала страницы для корпоративных сайтов",
-    skills_webdev_tasks2: "Добавляла интерактивность с помощью JavaScript",
-    skills_webdev_tasks3: "Поддерживала существующие проекты",
-    skills_webdev_achiev1:
+    experience_webdev_tasks1: "Верстала страницы для корпоративных сайтов",
+    experience_webdev_tasks2: "Добавляла интерактивность с помощью JavaScript",
+    experience_webdev_tasks3: "Поддерживала существующие проекты",
+    experience_webdev_achiev1:
       "Обеспечила более удобное сопровождение сайтов за счёт переработки их структуры",
-    skills_laydes_tasks1:
+    experience_laydes_tasks1:
       "Верстала сайты по макетам и адаптировала их под CMS Bitrix",
-    skills_laydes_tasks2:
+    experience_laydes_tasks2:
       "Проводила поддержку и доработку сайтов на различных CMS",
-    skills_laydes_tasks3:
+    experience_laydes_tasks3:
       "Переписывала старые сайты с 'плоского' HTML на PHP для упрощения администрирования",
-    skills_laydes_achiev1:
+    experience_laydes_achiev1:
       "Освоила несколько CMS, познакомилась с JavaScript и PHP",
-    skills_laydes_achiev2:
+    experience_laydes_achiev2:
       "Научилась планировать время и справляться с большим объёмом задач",
-    skills_webdes_tasks1:
+    experience_webdes_tasks1:
       "Подготавливала страницы для учебных пособий (дизайн и верстка)",
-    skills_webdes_tasks2:
+    experience_webdes_tasks2:
       "Оцифровывала тесты для системы дистанционного обучения",
-    skills_webdes_tasks3:
+    experience_webdes_tasks3:
       "Получила первый опыт взаимодействия с системами управления контентом",
-    skills_webdes_achiev1: "Освоила вёрстку и тренировалась в адаптивности",
+    experience_webdes_achiev1: "Освоила вёрстку и тренировалась в адаптивности",
     education: "Образование",
     education_appmath: "Прикладная математика и информатика",
     education_unver: "Самарский Государственный Университет",
@@ -202,32 +210,3 @@ const translations = {
     contacts: "Контакты",
   },
 };
-
-lang = "ru";
-
-function setLanguage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.dataset.i18n;
-    console.log(key);
-    const translated = translations[lang][key];
-    console.log(translated);
-    if (translated) el.textContent = translated;
-  });
-}
-
-let langButtons = document.querySelectorAll(".lang-buttons > button");
-langButtons.forEach((b) => {
-  b.addEventListener("click", () => {
-    lang = b.innerText;
-    setLanguage(lang);
-    langButtons.forEach((bb) => bb.removeAttribute("disabled"));
-    b.setAttribute("disabled", "");
-  });
-});
-
-//Update translation for the selected element:
-function updateTranslation(el, lang) {
-  const key = el.dataset.i18n;
-  const translated = translations[lang][key];
-  if (translated) el.textContent = translated;
-}

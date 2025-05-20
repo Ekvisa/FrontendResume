@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
   </head>
   <body>
     <div class="buttons-wrapper">
       <div class="showmode">
         <a
           href="https://docs.google.com/document/d/1rtVZ4v4xBggHXswYAqLEO0ThzZItaMqv_xg90vrON98/edit?usp=sharing"
+          data-i18n-href="usual_resume_href"
           title="Открыть в текстовом виде в новом окне"
           target="_blank"
-          data-i18n="usual-resume"
+          data-i18n="usual_resume"
           >Обычный вид</a
         >
         <button id="showAll" data-i18n="open_all">Раскрыть всё</button>
       </div>
       <div class="lang-buttons">
-        <button class="lang-btn active" disabled>ru</button>
-        <button class="lang-btn" id="lang-switch">en</button>
+        <button>ru</button>
+        <button>en</button>
       </div>
     </div>
     <main class="container">
@@ -359,19 +372,20 @@
         id="experience_block"
       >
         <i>let</i>
-        <h2>Опыт</h2>
+        <h2 data-i18n="experience">Опыт</h2>
         <i>= new Map([</i><br />
         &nbsp;&nbsp;["<b id="qa_tip">QA Engineer</b>", "NetCracker"],<br />
         &nbsp;&nbsp;["<b id="des_tip"
-          ><span data-i18n="skills_webdev">Web-разработчик</span></b
-        >", "<span data-i18n="skills_webstudio">Веб-студия</span> Sabit"],<br />
+          ><span data-i18n="experience_webdev">Web-разработчик</span></b
+        >", "<span data-i18n="experience_webstudio">Веб-студия</span>
+        Sabit"],<br />
         &nbsp;&nbsp;["<b id="dev_tip"
-          ><span data-i18n="skills_laydes">Верстальщик</span></b
-        >", "<span data-i18n="skills_webstudio">Веб-студия</span>
+          ><span data-i18n="experience_laydes">Верстальщик</span></b
+        >", "<span data-i18n="experience_webstudio">Веб-студия</span>
         MiraStudio"],<br />
         &nbsp;&nbsp;["<b id="layout_tip"
-          ><span data-i18n="skills_webdes">Web-дизайнер</span></b
-        >", "<span data-i18n="skills_univer"
+          ><span data-i18n="experience_webdes">Web-дизайнер</span></b
+        >", "<span data-i18n="experience_univer"
           >Самарский Государственный Университет</span
         >"],<br />
         <i>]);</i>
@@ -383,44 +397,44 @@
         &nbsp;&nbsp;<i>place:</i> "NetCracker",<br />
         &nbsp;&nbsp;<i>years:</i> "2010–2021",<br />
         &nbsp;&nbsp;<i
-          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+          >tasks: [ <span data-i18n="experience_tasks">//задачи</span></i
         ><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks1"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_tasks1"
           >Проводила ручное тестирование веб-приложений</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks2"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_tasks2"
           >Писала тест-кейсы</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks3"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_tasks3"
           >Составляла баг-репорты, готовила отчёты по автотестам</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks4"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_tasks4"
           >Создавала, настраивала и поддерживала автотесты</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks5"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_tasks5"
           >Готовила окружение для тестирования</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks6"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_tasks6"
           >Участвовала в ежедневных встречах и планировании спринтов</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_tasks7"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_tasks7"
           >Менторила младших специалистов и руководила тестированием на
           небольшом стриме</span
         >",<br />
         &nbsp;&nbsp;<i>],</i><br />
         &nbsp;&nbsp;<i
           >achievements: [
-          <span data-i18n="skills_achiev">//достижения</span></i
+          <span data-i18n="experience_achiev">//достижения</span></i
         ><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_achiev1"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_achiev1"
           >На проекте закрывала задачи за троих специалистов в условиях нехватки
           команды</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_achiev2"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_achiev2"
           >Обнаружила критический дефект в автотестах, который тормозил процесс
           тестирования</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_qa_achiev3"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_qa_achiev3"
           >Помогала оптимизировать процесс тестирования и подготовки
           окружений</span
         >",<br />
@@ -429,31 +443,31 @@
       </section>
       <section class="hidden resume-block experience-block" id="des_block">
         <i>const</i>
-        <h2 data-i18n="skills_webdev">Web-разработчик</h2>
+        <h2 data-i18n="experience_webdev">Web-разработчик</h2>
         <i>= {</i><br />
-        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="skills_webstudio"
+        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="experience_webstudio"
           >Веб-студия</span
         >
         Sabit",<br />
         &nbsp;&nbsp;<i>years:</i> "2009 - 2010",<br />
         &nbsp;&nbsp;<i
-          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+          >tasks: [ <span data-i18n="experience_tasks">//задачи</span></i
         ><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_tasks1"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_webdev_tasks1"
           >Верстала страницы для корпоративных сайтов</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_tasks2"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_webdev_tasks2"
           >Добавляла интерактивность с помощью JavaScript</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_tasks3"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_webdev_tasks3"
           >Поддерживала существующие проекты</span
         >",<br />
         &nbsp;&nbsp;<i>],</i><br />
         &nbsp;&nbsp;<i
           >achievements: [
-          <span data-i18n="skills_achiev">//достижения</span></i
+          <span data-i18n="experience_achiev">//достижения</span></i
         ><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdev_achiev1"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_webdev_achiev1"
           >Обеспечила более удобное сопровождение сайтов за счёт переработки их
           структуры</span
         >",<br />
@@ -462,35 +476,35 @@
       </section>
       <section class="hidden resume-block experience-block" id="dev_block">
         <i>const</i>
-        <h2 data-i18n="skills_laydes">Верстальщик</h2>
+        <h2 data-i18n="experience_laydes">Верстальщик</h2>
         <i>= {</i><br />
-        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="skills_webstudio"
+        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="experience_webstudio"
           >Веб-студия</span
         >
         MiraStudio",<br />
         &nbsp;&nbsp;<i>years:</i> "2008 - 2009",<br />
         &nbsp;&nbsp;<i
-          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+          >tasks: [ <span data-i18n="experience_tasks">//задачи</span></i
         ><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_tasks1"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_laydes_tasks1"
           >Верстала сайты по макетам и адаптировала их под CMS Bitrix</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_tasks2"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_laydes_tasks2"
           >Проводила поддержку и доработку сайтов на различных CMS</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_tasks3"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_laydes_tasks3"
           >Переписывала старые сайты с 'плоского' HTML на PHP для упрощения
           администрирования</span
         >",<br />
         &nbsp;&nbsp;<i>],</i><br />
         &nbsp;&nbsp;<i
           >achievements: [
-          <span data-i18n="skills_achiev">//достижения</span></i
+          <span data-i18n="experience_achiev">//достижения</span></i
         ><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_achiev1"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_laydes_achiev1"
           >Освоила несколько CMS, познакомилась с JavaScript и PHP</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_laydes_achiev2"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_laydes_achiev2"
           >Научилась планировать время и справляться с большим объёмом
           задач</span
         >",<br />
@@ -499,31 +513,31 @@
       </section>
       <section class="hidden resume-block experience-block" id="layout_block">
         <i>const</i>
-        <h2 data-i18n="skills_webdes">Web-дизайнер</h2>
+        <h2 data-i18n="experience_webdes">Web-дизайнер</h2>
         <i>= {</i><br />
-        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="skills_univer"
+        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="experience_univer"
           >Самарский Государственный Университет</span
         >",<br />
         &nbsp;&nbsp;<i>years:</i> "2006–2008",<br />
         &nbsp;&nbsp;<i
-          >tasks: [ <span data-i18n="skills_tasks">//задачи</span></i
+          >tasks: [ <span data-i18n="experience_tasks">//задачи</span></i
         ><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdes_tasks1"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_webdes_tasks1"
           >Подготавливала страницы для учебных пособий (дизайн и верстка)</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdes_tasks2"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_webdes_tasks2"
           >Оцифровывала тесты для системы дистанционного обучения</span
         >",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="skills_webdes_tasks3"
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_webdes_tasks3"
           >Получила первый опыт взаимодействия с системами управления
           контентом</span
         >",<br />
         &nbsp;&nbsp;<i>],</i><br />
         &nbsp;&nbsp;<i
           >achievements: [
-          <span data-i18n="skills_achiev">//достижения</span></i
+          <span data-i18n="experience_achiev">//достижения</span></i
         ><br />
-        "<span data-i18n="skills_webdes_achiev1"
+        "<span data-i18n="experience_webdes_achiev1"
           >Освоила вёрстку и тренировалась в адаптивности</span
         >"<br />
         &nbsp;&nbsp;<i>],</i><br />
@@ -618,7 +632,8 @@
 
       <button id="scrollTopBtn" class="hidden" aria-label="Наверх">↑</button>
     </main>
-    <script src="script.js"></script>
+
     <script src="translations.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
