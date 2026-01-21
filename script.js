@@ -3,16 +3,6 @@ function setLanguage(lang) {
   document.querySelectorAll("[data-i18n], [data-i18n-href]").forEach((el) => {
     updateTranslation(el, lang);
   });
-  // document.querySelectorAll("[data-i18n]").forEach((el) => {
-  //   const key = el.dataset.i18n;
-  //   const langData = translations[lang];
-  //   if (!langData) {
-  //     console.warn(`No translations found for language: ${lang}`);
-  //     return;
-  //   }
-  //   const translated = translations[lang][key];
-  //   if (translated) el.textContent = translated;
-  // });
 
   //Update buttons states:
   document.querySelectorAll(".lang-buttons > button").forEach((b) => {
@@ -43,11 +33,6 @@ document.querySelectorAll(".lang-buttons > button").forEach((b) => {
 });
 
 //Set translation for the selected element
-// function updateTranslation(el, lang) {
-//   const key = el.dataset.i18n;
-//   const translated = translations[lang][key];
-//   if (translated) el.textContent = translated;
-// }
 function updateTranslation(el, lang) {
   const textKey = el.dataset.i18n;
   const hrefKey = el.dataset.i18nHref;
@@ -177,6 +162,9 @@ function showAllBlocks() {
 showAllButton.addEventListener("click", showAllBlocks);
 
 resumeBlocks.forEach((block) => {
+  //Add explanation comment:
+  // block.append(findTipId(block).getAttribute("data-i18n")); // <-- think how to get the corret text by attribute value
+
   //Add Close buttons:
   const closeBtn = document.createElement("button");
   closeBtn.textContent = "×";

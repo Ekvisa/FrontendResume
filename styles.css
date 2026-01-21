@@ -64,7 +64,6 @@ svg {
 .colors path:hover {
   filter: saturate(2);
   animation: none;
-  cursor: pointer;
 }
 
 @keyframes pulseOpacity {
@@ -199,6 +198,7 @@ section h2 {
   background-color: #aed1ed;
 }
 
+#pet_block,
 #qa_block,
 #des_block,
 #dev_block,
@@ -214,6 +214,7 @@ section h2 {
   background-color: #c8bfe7;
 }
 
+#pet_tip,
 #qa_tip,
 #des_tip,
 #dev_tip,

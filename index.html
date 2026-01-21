@@ -306,8 +306,8 @@
         <i
           >&lt;!--
           <span data-i18n="comment"
-            >Поиграй с картинкой — она не просто так! Или раскрой сразу всё - я
-            не обижусь</span
+            >Поиграй с картинкой&nbsp;— она не просто так! Или раскрой сразу
+            всё&nbsp;— я не обижусь</span
           >
           ❀ --&gt;</i
         >
@@ -355,6 +355,9 @@
         &nbsp;&nbsp;//<span data-i18n="skills_lang">Языки программирования</span
         >:<br />
         &nbsp;&nbsp;[JavaScript, TypeScript, Java],<br />
+        &nbsp;&nbsp;//<span data-i18n="skills_frameworks">Фреймворки</span
+        >:<br />
+        &nbsp;&nbsp;[React],<br />
         &nbsp;&nbsp;//<span data-i18n="skills_data">Работа с данными</span
         >:<br />
         &nbsp;&nbsp;[REST API, JSON, DOM API, HTTP/HTTPS, SQL],<br />
@@ -374,6 +377,10 @@
         <i>let</i>
         <h2 data-i18n="experience">Опыт</h2>
         <i>= new Map([</i><br />
+        &nbsp;&nbsp;["<b id="pet_tip"
+          ><span data-i18n="experience_petproj">Пет-проекты</span></b
+        >", "<span data-i18n="experience_perspract">Моя личная практика</span
+        >"],<br />
         &nbsp;&nbsp;["<b id="qa_tip">QA Engineer</b>", "NetCracker"],<br />
         &nbsp;&nbsp;["<b id="des_tip"
           ><span data-i18n="experience_webdev">Web-разработчик</span></b
@@ -383,12 +390,46 @@
           ><span data-i18n="experience_laydes">Верстальщик</span></b
         >", "<span data-i18n="experience_webstudio">Веб-студия</span>
         MiraStudio"],<br />
+
         &nbsp;&nbsp;["<b id="layout_tip"
           ><span data-i18n="experience_webdes">Web-дизайнер</span></b
         >", "<span data-i18n="experience_univer"
           >Самарский Государственный Университет</span
         >"],<br />
         <i>]);</i>
+      </section>
+      <section class="hidden resume-block experience-block" id="pet_block">
+        <i>let</i>
+        <h2 data-i18n="experience_petproj">Пет-проекты</h2>
+        <i>= {</i><br />
+        &nbsp;&nbsp;<i>place:</i> "<span data-i18n="experience_perspract"
+          >Моя личная практика</span
+        >,<br />
+        &nbsp;&nbsp;<i>years:</i> "2022 - 2026",<br />
+        &nbsp;&nbsp;<i
+          >selected: [
+          <span data-i18n="experience_selproj">//избранные проекты</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<a href="http://"
+          ><span data-i18n="experience_petproj_pet1"
+            >Поиск пропавших котиков</span
+          ></a
+        >",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<a
+          href="https://github.com/Ekvisa/SpiritStones"
+          ><span data-i18n="experience_petproj_pet2"
+            >Авторские охлаждающие камни</span
+          ></a
+        >",<br />
+        &nbsp;&nbsp;<i>],</i><br />
+        &nbsp;&nbsp;<i
+          >all: <span data-i18n="experience_allproj">//все проекты</span></i
+        ><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"<span data-i18n="experience_petproj_all"
+          ><a href="https://github.com/Ekvisa">Github</a></span
+        >",<br />
+        &nbsp;&nbsp;<i>,</i><br />
+        <i>};</i>
       </section>
       <section class="hidden resume-block experience-block" id="qa_block">
         <i>const</i>
@@ -568,7 +609,7 @@
         >", 2008<i>),</i><br />
         &nbsp;&nbsp;<i>new <span data-i18n="education">Образование</span>(</i>
         "<span data-i18n="education_fe">Frontend разработка</span>", "JavaRush",
-        2025<i>)</i><br />
+        2026<i>)</i><br />
         <i>];</i>
       </section>
       <section class="hidden resume-block values-block" id="values_block">
@@ -600,15 +641,15 @@
         <i>create() { <span data-i18n="hobby_create">//создавать</span></i
         ><br />
         <i>return</i> ["<span data-i18n="hobby_create_draw">рисование</span>",
-        "<span data-i18n="hobby_create_pot">керамика</span>", "<span
-          data-i18n="hobby_create_pet"
-          >пет-проекты</span
+        "<span data-i18n="hobby_create_pot">керамика</span>", "<a
+          href="https://github.com/Ekvisa"
+          ><span data-i18n="hobby_create_pet">пет-проекты</span></a
         >"];<br />
         <i>},</i><br />
         <i>explore() { <span data-i18n="hobby_explore">//и изучать</span></i
         ><br />
-        <i>return</i> ["<span data-i18n="hobby_explore_foreign"
-          >иностранные языки</span
+        <i>return</i> ["<a href="https://www.duolingo.com/profile/Ekvi20"
+          ><span data-i18n="hobby_explore_foreign">иностранные языки</span></a
         >", "<span data-i18n="hobby_explore_sci">наука</span>", "<span
           data-i18n="hobby_explore_fic"
           >художественные книги</span
@@ -619,14 +660,14 @@
         <i>let</i>
         <h2 data-i18n="contacts">Контакты</h2>
         <i>= new Set([</i><br />
-        &nbsp;&nbsp;<a href="github.com/Ekvisa">GitHub</a>,<br />
+        &nbsp;&nbsp;<a href="@ek_pike">Telegram</a>,<br />
         &nbsp;&nbsp;<a href="mailto:katishh@gmail.com">katishh@gmail.com</a
         >,<br />
-        &nbsp;&nbsp;<a href="@ek_pike">Telegram</a>,<br />
         &nbsp;&nbsp;<a
           href="https://www.linkedin.com/in/ekaterina-savina-052774294/"
           >LinkedIn</a
         >,<br />
+        &nbsp;&nbsp;<a href="github.com/Ekvisa">GitHub</a>,<br />
         <i>]);</i>
       </section>
 
